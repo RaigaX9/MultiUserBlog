@@ -1,0 +1,28 @@
+<!--Login Page-->
+{% extends "index.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="loginbox">
+            <form method="post">
+                <h3 style="text-decoration: underline">Sign in</h3>
+                <br>
+                <div class="form-group">
+                    <label class="" for="username">Username</label>
+                    <input class="form-control" id="username" name="username" type="text" />
+                </div>
+                <div class="form-group">
+                    <label class="" for="username">Password</label>
+                    <input class="form-control" id="password" name="password" type="password" />
+                </div>
+                <div class="errormessage">{{messageerror}}</div>
+                <div>
+                    <input type="submit" class="btn btn-primary" value="Sign in" />
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

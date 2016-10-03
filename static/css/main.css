@@ -1,0 +1,45 @@
+body {
+	padding-top: 90px;
+}
+
+html{
+	max-width: 100%;
+}
+
+.loginbox {
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.loginbutton {
+	margin-top:-40px;
+	margin-bottom:20px;
+}
+
+.errormessage {
+	color:red;
+}
+
+.break1 {
+	margin-bottom:30px;
+}
+
+.registerbox {
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left:10px;
+	margin-right:10px;
+	padding-bottom: 30px;
+}
+
+.register_btn {
+	margin-top:30px;
+}
+
+
+
+

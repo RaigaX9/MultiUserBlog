@@ -1,0 +1,23 @@
+<!--Home Page-->
+{% extends "index.html" %}
+{% block content %}
+<div class="col-md-8">
+    {% for post in posts %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3><a href="/thread/{{ post.permalink }}">{{ post.subject }}</a></h3>
+            <p><span style="font-weight: bold">Posted by {{ post.username }}</span></p>
+        </div>
+        <div class="panel-body">
+            {% if post.content | length > 400 %}
+            <p>  {{ post.content[:200] }}... </p>
+            {% else %}
+            <p> {{ post.content }} </p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br/>
+{% endblock %}
+   

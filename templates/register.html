@@ -1,0 +1,37 @@
+<!--Register Page-->
+{% extends "index.html" %}
+{% block content %}
+<div class="row">
+	<div class="col-md-6">
+    	<div class="registerbox">
+            <form method="post">
+    		<h3 style="text-decoration: underline">Register</h3>
+    		<br>
+    		<div class="form-group">
+    	        <label class="" for="username">Username:</label>
+    	            <input class="form-control" id="username" name="username" type="text" />
+                    <div class="errormessage">
+                        {{ usernameerror }}
+                    </div>
+            </div>
+    		<div class="form-group">
+    	        <label class="" for="username">Password:</label>
+    	            <input class="form-control" id="password" name="password" type="password" />
+    	            <div class="errormessage">
+                        {{ passworderror }}
+                    </div>
+            </div>
+            <div class="form-group">
+                <label class="" for="username">Retype Password:</label>
+                    <input class="form-control" id="verify" name="verify" type="password" />
+                    <div class="errormessage">
+                        {{ verifyerror }}
+                    </div>
+            </div>
+    	    <div class="text-center">
+                <input type="submit" class="btn btn-primary" value="Register" />
+            </div>
+    	</div>
+	</div>
+</div>
+{% endblock %}

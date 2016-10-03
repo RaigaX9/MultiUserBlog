@@ -1,0 +1,21 @@
+indexes:
+
+- kind: User
+  properties:
+  - name: password
+
+- kind: User
+  properties:
+  - name: username
+  - name: password
+
+- kind: Comment
+  properties:
+  - name: pid
+  - name: created
+    direction: desc
+
+- kind: Post
+  properties:
+  - name: username
+  - name: permalink
