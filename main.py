@@ -183,7 +183,7 @@ class Login(BlogHandler):
 class Logout(BlogHandler):
     def get(self):
         self.logout()
-        self.redirect('/home')
+        self.redirect('/login')
 
 
 # Retrieves blog post and place it in the home page.
@@ -218,6 +218,11 @@ class CreatePost(BlogHandler):
                 p.permalink = str(p_key)
                 p.put()
                 self.redirect("/thread/%s" % p_key)
+            else:
+                self.render("createpost.html", username=self.username,
+                            messageerror="Title and Description are required.")
+        else:
+            self.write("Login is required to post")
 
 
 # This will view the blog post.
@@ -251,6 +256,15 @@ class PostEdit(BlogHandler):
                     p.put()
                     self.response.out.write(json.dumps(
                         ({'message': "Post Edit Changed!"})))
+                else:
+                    self.response.out.write(json.dumps(
+                        ({'error': "ERROR: You can't edit others' post."})))
+            else:
+                self.response.out.write(json.dumps(
+                    ({'error': "Title and description are both required!"})))
+        else:
+            self.response.out.write(json.dumps(
+                ({'error': "Login is required"})))
 
 
 # This will allow the user to delete blog post.
@@ -286,7 +300,9 @@ class CommentSection(BlogHandler):
                 com = Comment(username=self.user.name,
                               comment=thecom, pid=pid)
                 com.put()
-
+        else:
+            self.response.out.write(json.dumps(
+                ({'error': "Login is required to comment"})))
 # Allows user to edit their comments.
 
 

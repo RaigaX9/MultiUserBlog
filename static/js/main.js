@@ -90,7 +90,7 @@ $(document).ready(function(){
 				var x = $.parseJSON(data);
 				if (x.error)
 				{
-					alert("ERROR");
+					alert("ERROR: Login is required");
 				}
 				else
 				{
