@@ -300,6 +300,9 @@ class CommentSection(BlogHandler):
                 com = Comment(username=self.user.name,
                               comment=thecom, pid=pid)
                 com.put()
+            else:
+                self.response.out.write(json.dumps(
+                    ({'error': "Comment is required"})))
         else:
             self.response.out.write(json.dumps(
                 ({'error': "Login is required to comment"})))
