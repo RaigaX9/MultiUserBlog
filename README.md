@@ -4,7 +4,7 @@
 This project is done from Udacity's Full Stack Web Developer Nanodegree where we have to create a 
 multi user blog website using Python, HTML, CSS, Bootstrap, and Google App Engine.
 
-##Instructions
+## Instructions
 1. Download Python 2.7.x
 2. Download and install Google App Engine SDK for Python
 3. Clone this repo or download the zip file and unzip it
@@ -12,11 +12,11 @@ multi user blog website using Python, HTML, CSS, Bootstrap, and Google App Engin
 5. Type ```dev_appserver .```
 6. Go to your browser and type in ```localhost:8080```
 
-##Live Version
+## Live Version
 
 http://multiuserblog-141814.appspot.com/
 
-##References
+## References
 
 Idea inspired by https://github.com/arushidoshi/Multi_User_Blog
 
